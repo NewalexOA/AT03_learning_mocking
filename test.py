@@ -16,7 +16,7 @@ def test_successful_request(mocker):
 
 
 def test_unsuccessful_request(mocker):
-    # Создание имитации успешного ответа
+    # Создание имитации неуспешного ответа
     mock_get = mocker.patch('main.requests.get')
     mock_get.return_value.status_code = 404
     mock_get.return_value.json.return_value = None
